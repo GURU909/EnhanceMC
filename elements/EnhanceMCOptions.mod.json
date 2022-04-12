@@ -1,0 +1,101 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 224,
+    "height": 185,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "EnhanceMC Menu",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "EnhanceMC Menu",
+          "x": 177,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Gamerules",
+          "width": 72,
+          "height": 20,
+          "name": "Gamerules",
+          "x": 114,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Combat",
+          "width": 72,
+          "height": 20,
+          "name": "Combat",
+          "x": 114,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Items",
+          "width": 72,
+          "height": 20,
+          "name": "Items",
+          "x": 114,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Spawning",
+          "width": 72,
+          "height": 20,
+          "name": "Spawning",
+          "x": 114,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Privileges",
+          "width": 72,
+          "height": 20,
+          "name": "Privileges",
+          "x": 114,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Team Config",
+          "width": 72,
+          "height": 20,
+          "name": "Team Config",
+          "x": 240,
+          "y": 53
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
