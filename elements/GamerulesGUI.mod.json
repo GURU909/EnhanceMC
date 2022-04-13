@@ -1,0 +1,63 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 224,
+    "height": 185,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Gamerules Menu",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Gamerules Menu",
+          "x": 177,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Poison Ivy",
+          "onClick": {
+            "name": "EnablePoisonIvy"
+          },
+          "width": 90,
+          "height": 20,
+          "name": "Poison Ivy",
+          "x": 114,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Drought Mode",
+          "onClick": {
+            "name": "EnableDroughtMode"
+          },
+          "width": 90,
+          "height": 20,
+          "name": "Drought Mode",
+          "x": 114,
+          "y": 53
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

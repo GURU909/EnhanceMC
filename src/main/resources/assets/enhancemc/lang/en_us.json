@@ -1,3 +1,8 @@
 {
-  "itemGroup.tabenhance_mc": "Enhance MC"
+  "effect.poison_ivy_potion": "Poison Ivy",
+  "itemGroup.tabenhance_mc": "Enhance MC",
+  "gamerule.droughtMode.description": "Disables plant and food growth",
+  "gamerule.poisonIvy": "Poison Ivy",
+  "gamerule.poisonIvy.description": "Grass and plants now inflict poison effects",
+  "gamerule.droughtMode": "Drought Mode"
 }

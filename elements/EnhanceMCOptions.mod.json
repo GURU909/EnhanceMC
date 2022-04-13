@@ -27,6 +27,9 @@
         "type": "button",
         "data": {
           "text": "Gamerules",
+          "onClick": {
+            "name": "OpenGamerulesGUI"
+          },
           "width": 72,
           "height": 20,
           "name": "Gamerules",

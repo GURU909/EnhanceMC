@@ -22,7 +22,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.enhancemc.procedures.OpenGamerulesGUIProcedure;
+import net.mcreator.enhancemc.procedures.EnablePoisonIvyProcedure;
+import net.mcreator.enhancemc.procedures.EnableDroughtModeProcedure;
 import net.mcreator.enhancemc.EnhancemcModElements;
 
 import java.util.stream.Stream;
@@ -32,12 +33,12 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @EnhancemcModElements.ModElement.Tag
-public class EnhanceMCOptionsGui extends EnhancemcModElements.ModElement {
+public class GamerulesGUIGui extends EnhancemcModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 
-	public EnhanceMCOptionsGui(EnhancemcModElements instance) {
-		super(instance, 2);
+	public GamerulesGUIGui(EnhancemcModElements instance) {
+		super(instance, 7);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -49,13 +50,13 @@ public class EnhanceMCOptionsGui extends EnhancemcModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("enhance_mc_options"));
+			event.getRegistry().register(containerType.setRegistryName("gamerules_gui"));
 		}
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, EnhanceMCOptionsGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GamerulesGUIGuiWindow::new));
 	}
 
 	public static class GuiContainerModFactory implements IContainerFactory {
@@ -187,10 +188,15 @@ public class EnhanceMCOptionsGui extends EnhancemcModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			OpenGamerulesGUIProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			EnablePoisonIvyProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (buttonID == 1) {
+
+			EnableDroughtModeProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 

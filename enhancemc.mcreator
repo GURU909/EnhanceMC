@@ -59,13 +59,200 @@
       "locked_code": false,
       "registry_name": "open_emcgui",
       "path": "~/Commands"
+    },
+    {
+      "name": "GamerulesGUI",
+      "type": "gui",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamerules_gui",
+      "path": "~/GUI"
+    },
+    {
+      "name": "OpenGamerulesGUI",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_gamerules_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DroughtMode",
+      "type": "gamerule",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "droughtMode",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "EnableDroughtMode",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_drought_mode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DirtBlocks",
+      "type": "tag",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_blocks",
+      "path": "~/Tags"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "log_blocks",
+      "path": "~/Tags"
+    },
+    {
+      "name": "TickFunctions",
+      "type": "tag",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick_functions",
+      "path": "~/Tags"
+    },
+    {
+      "name": "PoisonIvy",
+      "type": "gamerule",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonIvy",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "EnablePoisonIvy",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_poison_ivy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "AsyncPoisonIvy",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "async_poison_ivy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonIvyPotionEffect",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_ivy_potion_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonIvyPotion",
+      "type": "potioneffect",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_ivy_potion",
+      "path": "~/Potion Effects"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "itemGroup.tabenhance_mc": "Enhance MC"
+      "effect.poison_ivy_potion": "Poison Ivy",
+      "itemGroup.tabenhance_mc": "Enhance MC",
+      "gamerule.droughtMode.description": "Disables plant and food growth",
+      "gamerule.poisonIvy": "Poison Ivy",
+      "gamerule.poisonIvy.description": "Grass and plants now inflict poison effects",
+      "gamerule.droughtMode": "Drought Mode"
     }
   },
   "foldersRoot": {
@@ -85,6 +272,18 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
         "children": []
       }
     ]
